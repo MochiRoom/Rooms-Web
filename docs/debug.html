@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form onsubmit="sendMessage(); return false" >
+        <input id="asd" type="text" value="asd">
+    </form>
+    
+    <div id="mess">
+        
+    </div>
+</body>
+</html>
+
+<script>
+    
+    const socket = new WebSocket("ws://"+window.location.hostname+":443")
+    
+    socket.addEventListener("close", function(event){
+        console.log("closed")
+    })
+
+    socket.addEventListener("message", function(event){
+        
+        document.getElementById("mess").innerHTML += "<hr>"
+        document.getElementById("mess").innerHTML += event.data
+        
+    })
+    
+    function sendMessage(){
+        
+        MessageSend = document.getElementById("asd").value
+        
+        console.log(MessageSend)
+        
+        socket.send(MessageSend)
+        
+    }
+    
+</script>

@@ -1,0 +1,151 @@
+ body,
+ html {
+     height: 100%;
+     margin: 0;
+     padding: 0;
+
+     font-family: Verdana, sans-serif;
+ }
+
+ .container {
+     display: flex;
+     height: 100%;
+
+ }
+
+ .sidebar {
+     flex: 0 0 18%;
+     /* Adjust the width as needed */
+     margin: 1%;
+     margin-right: 0.5%;
+     padding: 0.3%;
+     background-color: #f1f1f1;
+     border-radius: 10px;
+     overflow-y: auto;
+     overflow-x: auto;
+ }
+
+ .content {
+     flex: 1;
+     padding: 0.3%;
+     color: white;
+     background-color: black;
+     border-radius: 10px;
+     margin: 1%;
+     margin-left: 0.5%;
+     overflow-y: scroll;
+     overflow-x: auto;
+ }
+
+ /* Optional: Add some styles to make the sidebar always visible */
+ .sidebar {
+     position: fixed;
+     top: 0;
+     left: 0;
+     bottom: 0;
+ }
+
+ /* Optional: Add some styles to make the sidebar sticky */
+ .sidebar {
+     position: sticky;
+     top: 0;
+ }
+
+ /* Optional: Add some styles to add a box shadow to the sidebar */
+ .sidebar {
+     box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+ }
+
+ .inputMessage {
+     display: block;
+     position: fixed;
+     left: 50%;
+     bottom: 0;
+     transform: translate(-15%, 0%);
+
+     background-color: gray;
+     padding: 10px;
+
+     margin: 0 auto;
+     margin-bottom: 2%;
+
+
+     border-radius: 15px;
+ }
+
+ #messages {
+     font-size: xx-large;
+ }
+
+ /* bottom part of sidebar */
+ .sidebar {
+     display: flex;
+     flex-direction: column;
+     justify-content: space-between;
+     align-items: center;
+ }
+
+ .middle,
+ .top,
+ .bottom {
+     height: 100%;
+
+     background-color: #d1d1d1;
+     border-radius: 10px;
+     margin: 10px;
+     padding: 2%;
+     width: 90%;
+ }
+
+ .middle {
+     flex: 0 0 70%;
+     overflow-y: scroll;
+     overflow-x: auto;
+ }
+
+ .bottom,
+ .top {
+     display: flex;
+     justify-content: center;
+     align-items: center;
+
+     width: 85%;
+ }
+
+ #userName,
+ #roomCode,
+ #rightButton {
+     padding: 7px;
+     padding-bottom: 3px;
+     padding-top: 3px;
+     background-color: black;
+     color: white;
+     border-radius: 15px;
+     text-align: center;
+     font-size: large;
+     width: 70%;
+ }
+
+
+ #rightButton {
+     width: 12%;
+ }
+
+
+ .switch {
+     display: none;
+     /* Hide the radio buttons */
+ }
+
+ .switch+label {
+     cursor: pointer;
+     padding: 5px 10px;
+     background-color: #eaeaea;
+
+     margin: 10px;
+ }
+
+ .switch:checked+label {
+     background-color: #a3a3a3;
+     color: #ffffff;
+ }

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rooms</title>
+
+    <link rel="icon" type="image/png" href="/favicon.ico">
+
+    <link rel="stylesheet" href="css/index.css">
+</head>
+
+<body style="background-color: grey;">
+
+    <div class="container">
+        <div class="sidebar">
+            <!--
+                top part (join and stuff)
+            -->
+            <div class="top" id="top">
+
+                <form onsubmit="joinRoom(); return false" id="roomForm">
+                    <input type="text" id="roomCode" placeholder="Room code" maxlength="8">
+                    <input type="submit" id="rightButton" value="Join">
+                </form>
+
+
+            </div>
+
+            <!--
+                rooms
+            -->
+            <div class="middle" id="middle">
+                <br>
+
+                <!-- <div>
+                    <input type="radio" class="switch" id="00000000" name="switch" checked>
+                    <label for="00000000">Main</label>
+                </div> -->
+
+
+            </div>
+
+            <!--
+                bottom part (username for now, sign in later)
+            -->
+            <div class="bottom">
+                <input type="text" name="UserName" id="userName" maxlength="16" onblur="isEmpty()">
+            </div>
+
+
+        </div>
+
+        <div class="content">
+            <div id="DispName">
+                You are not in any room yet
+            </div>
+            <hr>
+            <div id="messages">
+                <!--
+                    messages displayed here
+                -->
+
+            </div>
+            <br> <br> <br> <br> <br>
+        </div>
+    </div>
+
+    <div class="inputMessage">
+        <form onsubmit="readMessage(); return false">
+            <input type="text" id="input" disabled>
+        </form>
+    </div>
+</body>
+
+</html>
+
+<script src="scripts/index.js"></script>
